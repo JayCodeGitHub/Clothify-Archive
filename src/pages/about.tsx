@@ -1,16 +1,9 @@
-import Link from "next/link";
+import NavBar from "@/components/navbar/navbar";
 
 export default function AboutPage() {
   return (
     <main>
-      <ul>
-        <li>
-          <Link href="/">Clothify</Link>
-        </li>
-        <li>
-          <Link href="/about">About Us</Link>
-        </li>
-      </ul>
+      <NavBar />
       <h1>About</h1>
     </main>
   );
