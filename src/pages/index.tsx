@@ -5,6 +5,9 @@ export default function HomePage() {
   return (
     <Wrapper>
       <StoreItem />
+      <StoreItem />
+      <StoreItem />
+      <StoreItem />
     </Wrapper>
   );
 }
