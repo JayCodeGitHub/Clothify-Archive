@@ -9,7 +9,7 @@ export const theme = {
         xxs: '.4rem',
         xs: '.9rem',
         s: '1.1rem',
-        m: '1.8rem',
+        m: '1.4rem',
         l: '2.2rem',
         xl: '2.8rem',
         xxl: '3.2rem',

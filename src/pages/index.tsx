@@ -8,6 +8,18 @@ export default function HomePage() {
       <StoreItem />
       <StoreItem />
       <StoreItem />
+      <StoreItem />
+      <StoreItem />
+      <StoreItem />
+      <StoreItem />
+      <StoreItem />
+      <StoreItem />
+      <StoreItem />
+      <StoreItem />
+      <StoreItem />
+      <StoreItem />
+      <StoreItem />
+      <StoreItem />
     </Wrapper>
   );
 }
