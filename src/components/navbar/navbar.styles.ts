@@ -8,6 +8,7 @@ export const OuterWrapper = styled.nav`
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
+    background-color: ${({ theme }) => theme.secondary};
 `
 
 export const Wrapper = styled.ul`
