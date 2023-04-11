@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { Wrapper } from "./navbar.styles";
 
 export default function NavBar() {
   return (
-    <nav>
+    <Wrapper>
       <ul>
         <li>
           <Link href="/">Clothify</Link>
@@ -11,6 +12,6 @@ export default function NavBar() {
           <Link href="/about">About Us</Link>
         </li>
       </ul>
-    </nav>
+    </Wrapper>
   );
 }
