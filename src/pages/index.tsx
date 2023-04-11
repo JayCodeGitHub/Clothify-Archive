@@ -1,10 +1,10 @@
+import { Wrapper } from "@/styles/pages/homepage.styles";
 import StoreItem from "@/components/storeItem/storeItem";
 
 export default function HomePage() {
   return (
-    <main>
-      <h1>Clothify</h1>
+    <Wrapper>
       <StoreItem />
-    </main>
+    </Wrapper>
   );
 }
