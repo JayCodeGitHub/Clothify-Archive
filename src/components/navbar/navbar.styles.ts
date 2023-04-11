@@ -21,10 +21,28 @@ export const Wrapper = styled.ul`
     }
 `
 
+export const NavigationItem = styled.li`
+   transition: color 0.1s ease-in-out;
+    &:hover{
+        color: ${({ theme }) => theme.primary};
+    }
+
+`
+
 export const CartWrapper = styled.span`
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: ${({ theme }) => theme.font.size.xs};
+    &:hover{
+        color: ${({ theme }) => theme.primary};
+        svg {
+            stroke: ${({ theme }) => theme.primary};
+        }
+    }
+    transition: color 0.1s ease-in-out;
+    svg {
+        transition: stroke 0.1s ease-in-out;
+    }
 `

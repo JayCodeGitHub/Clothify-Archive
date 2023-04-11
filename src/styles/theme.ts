@@ -1,6 +1,6 @@
 export const theme = {
-    primary: '',
-    secondary: '',
+    primary: '#F8333C',
+    secondary: '#ECE9EA',
     dark: '#000000',
     light: '#FFFFFF',
     grey: '#C4C4C4',
@@ -8,7 +8,7 @@ export const theme = {
       size: {
         xxs: '.4rem',
         xs: '.9rem',
-        s: '1.2rem',
+        s: '1.1rem',
         m: '1.8rem',
         l: '2.2rem',
         xl: '2.8rem',
