@@ -1,4 +1,4 @@
-import { Wrapper } from "@/styles/pages/homepage.styles";
+import { Wrapper } from "@/styles/pages/home.styles";
 import StoreItem from "@/components/storeItem/storeItem";
 
 export default function HomePage() {
