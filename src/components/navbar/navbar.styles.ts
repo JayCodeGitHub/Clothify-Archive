@@ -30,7 +30,7 @@ export const NavigationItem = styled.li`
 
 `
 
-export const CartWrapper = styled.span`
+export const CartIcon = styled.span`
     display: flex;
     justify-content: center;
     align-items: center;
