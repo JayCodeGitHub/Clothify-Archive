@@ -42,3 +42,7 @@ export default function NavBar() {
     </OuterWrapper>
   );
 }
+
+NavBar.getInitialProps = async ({}) => {
+  return { ssr: false };
+};
