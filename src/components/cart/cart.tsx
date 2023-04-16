@@ -1,9 +1,19 @@
-import { Wrapper } from "./cart.styles";
+import { Background, OuterWrapper, Wrapper } from "./cart.styles";
 
-export default function Cart() {
+interface CartProps {
+  isCart: boolean;
+  setIsCart: (a: boolean) => void;
+}
+
+export default function Cart({ isCart, setIsCart }: CartProps) {
   return (
-    <Wrapper>
-      <h1>dweberb</h1>
-    </Wrapper>
+    <>
+      <OuterWrapper>
+        <Background isCart={isCart} onClick={() => setIsCart(false)} />
+        <Wrapper isCart={isCart}>
+          <h1>Cart</h1>
+        </Wrapper>
+      </OuterWrapper>
+    </>
   );
 }

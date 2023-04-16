@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Link from "next/link";
 import {
   OuterWrapper,
@@ -5,8 +6,10 @@ import {
   CartIcon,
   NavigationItem,
 } from "./navbar.styles";
+import Cart from "../cart/cart";
 
 export default function NavBar() {
+  const [isCart, setIsCart] = useState(false);
   return (
     <OuterWrapper>
       <Wrapper>
@@ -17,7 +20,7 @@ export default function NavBar() {
           <Link href="/about">About Us</Link>
         </NavigationItem>
       </Wrapper>
-      <Link href="/">
+      <Link href="/" onClick={() => setIsCart(true)}>
         <CartIcon>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -35,6 +38,7 @@ export default function NavBar() {
           <p>Cart</p>
         </CartIcon>
       </Link>
+      <Cart isCart={isCart} setIsCart={setIsCart} />
     </OuterWrapper>
   );
 }
