@@ -25,9 +25,36 @@ export const Wrapper = styled.section<{isCart: boolean}>`
     z-index: 100;
     transition: transform .3s .1s ease-in-out;
     transform: translateX(${({isCart}) => isCart ? '0' : '+100%'});
-    background-color: white;
+    background-color: ${({ theme }) => theme.secondary};
     width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 2rem;
     ${({ theme }) => theme.mq.desktop} {
         width: 35%;
     }
+`
+
+export const CartItem = styled.div`
+    width: 80%;
+    border-radius: 0.5rem;
+    background-color: ${({ theme }) => theme.light};
+`
+
+export const Subtotal = styled.p`
+    align-self: flex-start;
+    padding: 1rem 0  0 10%;
+`
+
+export const Button = styled.button`
+    background-color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.light};
+    font-size: ${({ theme }) => theme.font.size.xs};
+    font-weight: 600;
+    border-radius: 0.5rem;
+    width: 80%;
+    border: none;
+    padding: 1rem 0;
 `

@@ -1,4 +1,11 @@
-import { Background, OuterWrapper, Wrapper } from "./cart.styles";
+import {
+  Background,
+  OuterWrapper,
+  Wrapper,
+  CartItem,
+  Subtotal,
+  Button,
+} from "./cart.styles";
 
 interface CartProps {
   isCart: boolean;
@@ -7,13 +14,15 @@ interface CartProps {
 
 export default function Cart({ isCart, setIsCart }: CartProps) {
   return (
-    <>
-      <OuterWrapper>
-        <Background isCart={isCart} onClick={() => setIsCart(false)} />
-        <Wrapper isCart={isCart}>
+    <OuterWrapper>
+      <Background isCart={isCart} onClick={() => setIsCart(false)} />
+      <Wrapper isCart={isCart}>
+        <CartItem>
           <h1>Cart</h1>
-        </Wrapper>
-      </OuterWrapper>
-    </>
+        </CartItem>
+        <Subtotal>Subtotal: 76$</Subtotal>
+        <Button>Purchase</Button>
+      </Wrapper>
+    </OuterWrapper>
   );
 }
