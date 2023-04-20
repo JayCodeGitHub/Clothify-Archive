@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Wrapper,
   StyledImage,
@@ -10,6 +11,7 @@ import {
 } from "./cartItem.styles";
 
 export default function CartItem() {
+  const [count, setCount] = useState(1);
   return (
     <Wrapper>
       <StyledImage
@@ -25,7 +27,7 @@ export default function CartItem() {
         <Price>12$</Price>
         <QuantityWrapper>
           Quantity:
-          <IconWrapper>
+          <IconWrapper onClick={() => setCount(count - 1)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -40,8 +42,8 @@ export default function CartItem() {
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
           </IconWrapper>
-          <Quantity>1</Quantity>
-          <IconWrapper>
+          <Quantity>{count}</Quantity>
+          <IconWrapper onClick={() => setCount(count + 1)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

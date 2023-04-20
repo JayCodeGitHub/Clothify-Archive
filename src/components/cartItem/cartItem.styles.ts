@@ -50,11 +50,11 @@ export const Price = styled.h2`
 export const QuantityWrapper = styled.span`
     margin-top: auto;
     display: flex;
-    gap: 0.5rem;
+    gap: .5rem;
     align-items: center;
 `
 
-export const IconWrapper = styled.span`
+export const IconWrapper = styled.button`
     width: 2rem;
     height: 2rem;
     border-radius: 100%;
@@ -62,6 +62,10 @@ export const IconWrapper = styled.span`
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
 `
 
-export const Quantity = styled.h3``
+export const Quantity = styled.h3`
+    width: 1.5rem;
+    text-align: center;
+`
