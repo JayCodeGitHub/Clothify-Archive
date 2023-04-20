@@ -37,11 +37,6 @@ export const Wrapper = styled.section<{isCart: boolean}>`
     }
 `
 
-export const CartItem = styled.div`
-    width: 80%;
-    border-radius: 0.5rem;
-    background-color: ${({ theme }) => theme.light};
-`
 
 export const Subtotal = styled.p`
     align-self: flex-start;

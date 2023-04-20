@@ -2,10 +2,10 @@ import {
   Background,
   OuterWrapper,
   Wrapper,
-  CartItem,
   Subtotal,
   Button,
 } from "./cart.styles";
+import CartItem from "../cartItem/cartItem";
 
 interface CartProps {
   isCart: boolean;
@@ -17,9 +17,7 @@ export default function Cart({ isCart, setIsCart }: CartProps) {
     <OuterWrapper>
       <Background isCart={isCart} onClick={() => setIsCart(false)} />
       <Wrapper isCart={isCart}>
-        <CartItem>
-          <h1>Cart</h1>
-        </CartItem>
+        <CartItem />
         <Subtotal>Subtotal: 76$</Subtotal>
         <Button>Purchase</Button>
       </Wrapper>
