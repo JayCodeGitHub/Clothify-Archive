@@ -1,14 +1,15 @@
 import { Wrapper, StyledImage, Title, Price } from "./storeItem.styles";
 
 interface StoreItemProps {
+  slug: string;
   title: string;
   img: string;
   price: string;
 }
 
-export default function StoreItem({ title, img, price }: StoreItemProps) {
+export default function StoreItem({ slug, title, img, price }: StoreItemProps) {
   return (
-    <Wrapper href="/">
+    <Wrapper href={slug}>
       <StyledImage
         src={img}
         alt="Picture of the author"
