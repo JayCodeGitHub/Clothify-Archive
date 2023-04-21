@@ -1,4 +1,5 @@
 import { Wrapper, Header } from "@/styles/pages/about.styles";
+import { AboutItems } from "@/assets/aboutItems";
 
 export default function AboutPage() {
   return (
@@ -6,142 +7,15 @@ export default function AboutPage() {
       <Header>
         <h1>About</h1>
       </Header>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-        accusamus accusantium sint. Commodi cum amet ut veniam illo eum magnam,
-        rem eaque sunt natus explicabo reiciendis sapiente aliquam.
-        Necessitatibus, molestias. Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Quidem accusamus accusantium sint. Commodi cum amet ut
-        veniam illo eum magnam, rem eaque sunt natus explicabo reiciendis
-        sapiente aliquam. Necessitatibus, molestias. Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Quidem accusamus accusantium sint.
-        Commodi cum amet ut veniam illo eum magnam, rem eaque sunt natus
-        explicabo reiciendis sapiente aliquam. Necessitatibus, molestias. Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Quidem accusamus
-        accusantium sint. Commodi cum amet ut veniam illo eum magnam, rem eaque
-        sunt natus explicabo reiciendis sapiente aliquam. Necessitatibus,
-        molestias. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Quidem accusamus accusantium sint. Commodi cum amet ut veniam illo eum
-        magnam, rem eaque sunt natus explicabo reiciendis sapiente aliquam.
-        Necessitatibus, molestias. Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Quidem accusamus accusantium sint. Commodi cum amet ut
-        veniam illo eum magnam, rem eaque sunt natus explicabo reiciendis
-        sapiente aliquam. Necessitatibus, molestias. Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Quidem accusamus accusantium sint.
-        Commodi cum amet ut veniam illo eum magnam, rem eaque sunt natus
-        explicabo reiciendis sapiente aliquam. Necessitatibus, molestias. Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Quidem accusamus
-        accusantium sint. Commodi cum amet ut veniam illo eum magnam, rem eaque
-        sunt natus explicabo reiciendis sapiente aliquam. Necessitatibus,
-        molestias. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Quidem accusamus accusantium sint. Commodi cum amet ut veniam illo eum
-        magnam, rem eaque sunt natus explicabo reiciendis sapiente aliquam.
-        Necessitatibus, molestias.
-      </p>
-      <br />
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-        accusamus accusantium sint. Commodi cum amet ut veniam illo eum magnam,
-        rem eaque sunt natus explicabo reiciendis sapiente aliquam.
-        Necessitatibus, molestias. Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Quidem accusamus accusantium sint. Commodi cum amet ut
-        veniam illo eum magnam, rem eaque sunt natus explicabo reiciendis
-        sapiente aliquam. Necessitatibus, molestias. Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Quidem accusamus accusantium sint.
-        Commodi cum amet ut veniam illo eum magnam, rem eaque sunt natus
-        explicabo reiciendis sapiente aliquam. Necessitatibus, molestias. Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Quidem accusamus
-        accusantium sint. Commodi cum amet ut veniam illo eum magnam, rem eaque
-        sunt natus explicabo reiciendis sapiente aliquam. Necessitatibus,
-        molestias. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Quidem accusamus accusantium sint. Commodi cum amet ut veniam illo eum
-        magnam, rem eaque sunt natus explicabo reiciendis sapiente aliquam.
-        Necessitatibus, molestias. Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Quidem accusamus accusantium sint. Commodi cum amet ut
-        veniam illo eum magnam, rem eaque sunt natus explicabo reiciendis
-        sapiente aliquam. Necessitatibus, molestias. Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Quidem accusamus accusantium sint.
-        Commodi cum amet ut veniam illo eum magnam, rem eaque sunt natus
-        explicabo reiciendis sapiente aliquam. Necessitatibus, molestias. Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Quidem accusamus
-        accusantium sint. Commodi cum amet ut veniam illo eum magnam, rem eaque
-        sunt natus explicabo reiciendis sapiente aliquam. Necessitatibus,
-        molestias. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Quidem accusamus accusantium sint. Commodi cum amet ut veniam illo eum
-        magnam, rem eaque sunt natus explicabo reiciendis sapiente aliquam.
-        Necessitatibus, molestias.
-      </p>
-      <br />
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-        accusamus accusantium sint. Commodi cum amet ut veniam illo eum magnam,
-        rem eaque sunt natus explicabo reiciendis sapiente aliquam.
-        Necessitatibus, molestias. Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Quidem accusamus accusantium sint. Commodi cum amet ut
-        veniam illo eum magnam, rem eaque sunt natus explicabo reiciendis
-        sapiente aliquam. Necessitatibus, molestias. Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Quidem accusamus accusantium sint.
-        Commodi cum amet ut veniam illo eum magnam, rem eaque sunt natus
-        explicabo reiciendis sapiente aliquam. Necessitatibus, molestias. Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Quidem accusamus
-        accusantium sint. Commodi cum amet ut veniam illo eum magnam, rem eaque
-        sunt natus explicabo reiciendis sapiente aliquam. Necessitatibus,
-        molestias. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Quidem accusamus accusantium sint. Commodi cum amet ut veniam illo eum
-        magnam, rem eaque sunt natus explicabo reiciendis sapiente aliquam.
-        Necessitatibus, molestias. Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Quidem accusamus accusantium sint. Commodi cum amet ut
-        veniam illo eum magnam, rem eaque sunt natus explicabo reiciendis
-        sapiente aliquam. Necessitatibus, molestias. Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Quidem accusamus accusantium sint.
-        Commodi cum amet ut veniam illo eum magnam, rem eaque sunt natus
-        explicabo reiciendis sapiente aliquam. Necessitatibus, molestias. Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Quidem accusamus
-        accusantium sint. Commodi cum amet ut veniam illo eum magnam, rem eaque
-        sunt natus explicabo reiciendis sapiente aliquam. Necessitatibus,
-        molestias. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Quidem accusamus accusantium sint. Commodi cum amet ut veniam illo eum
-        magnam, rem eaque sunt natus explicabo reiciendis sapiente aliquam.
-        Necessitatibus, molestias.
-      </p>
-      <br />
-      <br />
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-        accusamus accusantium sint. Commodi cum amet ut veniam illo eum magnam,
-        rem eaque sunt natus explicabo reiciendis sapiente aliquam.
-        Necessitatibus, molestias. Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Quidem accusamus accusantium sint. Commodi cum amet ut
-        veniam illo eum magnam, rem eaque sunt natus explicabo reiciendis
-        sapiente aliquam. Necessitatibus, molestias. Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Quidem accusamus accusantium sint.
-        Commodi cum amet ut veniam illo eum magnam, rem eaque sunt natus
-        explicabo reiciendis sapiente aliquam. Necessitatibus, molestias. Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Quidem accusamus
-        accusantium sint. Commodi cum amet ut veniam illo eum magnam, rem eaque
-        sunt natus explicabo reiciendis sapiente aliquam. Necessitatibus,
-        molestias. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Quidem accusamus accusantium sint. Commodi cum amet ut veniam illo eum
-        magnam, rem eaque sunt natus explicabo reiciendis sapiente aliquam.
-        Necessitatibus, molestias. Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit. Quidem accusamus accusantium sint. Commodi cum amet ut
-        veniam illo eum magnam, rem eaque sunt natus explicabo reiciendis
-        sapiente aliquam. Necessitatibus, molestias. Lorem ipsum dolor sit amet
-        consectetur, adipisicing elit. Quidem accusamus accusantium sint.
-        Commodi cum amet ut veniam illo eum magnam, rem eaque sunt natus
-        explicabo reiciendis sapiente aliquam. Necessitatibus, molestias. Lorem
-        ipsum dolor sit amet consectetur, adipisicing elit. Quidem accusamus
-        accusantium sint. Commodi cum amet ut veniam illo eum magnam, rem eaque
-        sunt natus explicabo reiciendis sapiente aliquam. Necessitatibus,
-        molestias. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Quidem accusamus accusantium sint. Commodi cum amet ut veniam illo eum
-        magnam, rem eaque sunt natus explicabo reiciendis sapiente aliquam.
-        Necessitatibus, molestias.
-      </p>
-      <br />
-      <br />
+      {AboutItems.map((item) => (
+        <>
+          <p>{item.paragraph}</p>
+          <br />
+          <br />
+          <br />
+          <br />
+        </>
+      ))}
     </Wrapper>
   );
 }

@@ -63,6 +63,7 @@ export const IconWrapper = styled.button`
     justify-content: center;
     align-items: center;
     border: none;
+    cursor: pointer;
 `
 
 export const Quantity = styled.h3`
