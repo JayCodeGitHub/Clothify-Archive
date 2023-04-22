@@ -36,6 +36,7 @@ export const CartIcon = styled.span`
     align-items: center;
     flex-direction: column;
     font-size: ${({ theme }) => theme.font.size.xs};
+    cursor: pointer;
     &:hover{
         color: ${({ theme }) => theme.primary};
         svg {
