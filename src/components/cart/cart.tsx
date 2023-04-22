@@ -1,11 +1,6 @@
-import {
-  Background,
-  OuterWrapper,
-  Wrapper,
-  Subtotal,
-  Button,
-} from "./cart.styles";
+import { Background, OuterWrapper, Wrapper, Subtotal } from "./cart.styles";
 import CartItem from "../cartItem/cartItem";
+import Button from "../button/button.styles";
 
 interface CartProps {
   isCart: boolean;

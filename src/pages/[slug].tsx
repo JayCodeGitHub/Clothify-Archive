@@ -6,9 +6,9 @@ import {
   QuantityWrapper,
   IconWrapper,
   Quantity,
-  Button,
   DescriptionWrapper,
 } from "@/styles/pages/item.styles";
+import Button from "@/components/button/button.styles";
 
 export async function getStaticPaths() {
   return {
