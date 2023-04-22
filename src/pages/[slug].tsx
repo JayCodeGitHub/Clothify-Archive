@@ -1,5 +1,14 @@
+import { useState } from "react";
 import { StoreItems } from "@/assets/storeItems";
-import { Wrapper } from "@/styles/pages/item.styles";
+import {
+  Wrapper,
+  StyledImage,
+  QuantityWrapper,
+  IconWrapper,
+  Quantity,
+  Button,
+  DescriptionWrapper,
+} from "@/styles/pages/item.styles";
 
 export async function getStaticPaths() {
   return {
@@ -17,9 +26,58 @@ export async function getStaticProps({ params }: any) {
 }
 
 export default function Item({ item }: any) {
+  const [count, setCount] = useState(1);
   return (
     <Wrapper>
-      <h1>{item.title}</h1>
+      <StyledImage
+        src={item.img}
+        alt="Picture of the author"
+        width={500}
+        height={500}
+        blurDataURL="data:..."
+        placeholder="blur"
+      />
+      <DescriptionWrapper>
+        <h1>{item.title}</h1>
+        <h2>{item.description}</h2>
+        <h3>{item.price}</h3>
+        <QuantityWrapper>
+          Quantity:
+          <IconWrapper onClick={() => setCount(count - 1)}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ffffff"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </IconWrapper>
+          <Quantity>{count}</Quantity>
+          <IconWrapper onClick={() => setCount(count + 1)}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ffffff"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </IconWrapper>
+        </QuantityWrapper>
+        <Button>Add to cart</Button>
+      </DescriptionWrapper>
     </Wrapper>
   );
 }
