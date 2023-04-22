@@ -12,17 +12,24 @@ import { useCart } from "@/hooks/useCart";
 
 interface CartItemProps {
   id: number;
+  img: string;
   name: string;
   quantity: number;
   price: number;
 }
 
-export default function CartItem({ id, name, price, quantity }: CartItemProps) {
+export default function CartItem({
+  id,
+  img,
+  name,
+  price,
+  quantity,
+}: CartItemProps) {
   const { quantityIncrementation, quantityDecrementation } = useCart();
   return (
     <Wrapper>
       <StyledImage
-        src="/Items/t-shirt.jpeg"
+        src={img}
         alt="Item Image"
         width={500}
         height={500}

@@ -18,6 +18,7 @@ export default function Cart({ isCart, setIsCart }: CartProps) {
           <CartItem
             key={item.id}
             id={item.id}
+            img={item.img}
             name={item.name}
             quantity={item.quantity}
             price={item.price}

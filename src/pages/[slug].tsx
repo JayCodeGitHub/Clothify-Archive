@@ -9,6 +9,7 @@ import {
   DescriptionWrapper,
 } from "@/styles/pages/item.styles";
 import Button from "@/components/button/button.styles";
+import { useCart } from "@/hooks/useCart";
 
 export async function getStaticPaths() {
   return {
@@ -27,6 +28,11 @@ export async function getStaticProps({ params }: any) {
 
 export default function Item({ item }: any) {
   const [count, setCount] = useState(1);
+  const { addItem } = useCart();
+  const addToCart = () => {
+    addItem(item, count);
+    setCount(1);
+  };
   return (
     <Wrapper>
       <StyledImage
@@ -38,7 +44,7 @@ export default function Item({ item }: any) {
         placeholder="blur"
       />
       <DescriptionWrapper>
-        <h1>{item.title}</h1>
+        <h1>{item.name}</h1>
         <h2>{item.description}</h2>
         <h3>{item.price}</h3>
         <QuantityWrapper>
@@ -76,7 +82,7 @@ export default function Item({ item }: any) {
             </svg>
           </IconWrapper>
         </QuantityWrapper>
-        <Button>Add to cart</Button>
+        <Button onClick={() => addToCart()}>Add to cart</Button>
       </DescriptionWrapper>
     </Wrapper>
   );

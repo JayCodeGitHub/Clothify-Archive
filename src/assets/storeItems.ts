@@ -5,7 +5,8 @@ export const StoreItems = [
         slug: 't-shirt',
         img: "/Items/t-shirt.jpeg",
         price: "12$",
-        description: "ednwrn"
+        description: "ednwrn",
+        quantity: 1
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ export const StoreItems = [
         slug: 'red-hat',
         img: "/Items/hat.jpeg",
         price: "20$",
-        description: "ashrewh"
+        description: "ashrewh",
+        quantity: 1
     },
     {
         id: 3,
@@ -21,7 +23,8 @@ export const StoreItems = [
         slug: 'jacket',
         img: "/Items/jacket.jpeg",
         price: "45$",
-        description: "waerh"
+        description: "waerh",
+        quantity: 1
     },
     {
         id: 4,
@@ -29,7 +32,8 @@ export const StoreItems = [
         slug: 'jean-jacket',
         img: "/Items/jean-jacket.jpeg",
         price: "40$",
-        description: "eber"
+        description: "eber",
+        quantity: 1
     },
     {
         id: 5,
@@ -37,7 +41,8 @@ export const StoreItems = [
         slug: 'sweatshirt',
         img: "/Items/sweatshirt.jpeg",
         price: "30$",
-        description: "bewrb"
+        description: "bewrb",
+        quantity: 1
     },
     {
         id: 6,
@@ -45,6 +50,7 @@ export const StoreItems = [
         slug: 'trousers',
         img: "/Items/trousers.jpeg",
         price: "20$",
-        description: "ehewr"
+        description: "ehewr",
+        quantity: 1
     },
 ]
