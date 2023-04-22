@@ -6,11 +6,16 @@ export const Wrapper = styled.main`
     display: flex;
     width: 100%;
     justify-content: center;
-    gap: 10rem;
+    align-items: center;
+    flex-direction: column;
+    ${({ theme }) => theme.mq.desktop} {
+        flex-direction: row;
+        gap: 10rem;
+    }
 `
 
 export const StyledImage = styled(Image)`
-    height: 28rem;
+    width: 90vw;
     object-fit: cover;
     border-radius: 0.2rem;
     align-self: center;
@@ -20,12 +25,16 @@ export const StyledImage = styled(Image)`
     }
 `
 export const DescriptionWrapper = styled.div`
-    height: 20rem;
-    width: 30rem;
+    width: 90vw;
     display: flex;
+    padding: 2rem 0;
     flex-direction: column;
-justify-content: space-around;
-gap: 0.5rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+    ${({ theme }) => theme.mq.desktop} {
+        height: 20rem;
+        width: 30rem;
+    }
 
 `
 
