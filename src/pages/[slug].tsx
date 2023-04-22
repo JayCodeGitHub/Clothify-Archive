@@ -9,7 +9,6 @@ import {
   DescriptionWrapper,
 } from "@/styles/pages/item.styles";
 import Button from "@/components/button/button.styles";
-import { useCart } from "@/hooks/useCart";
 
 export async function getStaticPaths() {
   return {
@@ -28,8 +27,6 @@ export async function getStaticProps({ params }: any) {
 
 export default function Item({ item }: any) {
   const [count, setCount] = useState(1);
-  const { cart } = useCart();
-  console.log(cart);
   return (
     <Wrapper>
       <StyledImage

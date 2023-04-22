@@ -1,8 +1,7 @@
-import { useState } from "react";
 import {
   Wrapper,
   StyledImage,
-  Title,
+  Name,
   Price,
   QuantityWrapper,
   IconWrapper,
@@ -10,8 +9,13 @@ import {
   Description,
 } from "./cartItem.styles";
 
-export default function CartItem() {
-  const [count, setCount] = useState(1);
+interface CartItemProps {
+  name: string;
+  quantity: number;
+  price: number;
+}
+
+export default function CartItem({ name, price, quantity }: CartItemProps) {
   return (
     <Wrapper>
       <StyledImage
@@ -23,11 +27,11 @@ export default function CartItem() {
         placeholder="blur"
       />
       <Description>
-        <Title>T-Shirt</Title>
-        <Price>12$</Price>
+        <Name>{name}</Name>
+        <Price>{price}$</Price>
         <QuantityWrapper>
           Quantity:
-          <IconWrapper onClick={() => setCount(count - 1)}>
+          <IconWrapper>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -42,8 +46,8 @@ export default function CartItem() {
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
           </IconWrapper>
-          <Quantity>{count}</Quantity>
-          <IconWrapper onClick={() => setCount(count + 1)}>
+          <Quantity>{quantity}</Quantity>
+          <IconWrapper>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

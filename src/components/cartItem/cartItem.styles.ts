@@ -39,7 +39,7 @@ export const Description = styled.span`
     align-items: flex-start;
 `
 
-export const Title = styled.h1`
+export const Name = styled.h1`
     font-size: ${({ theme }) => theme.font.size.m};
 `
 

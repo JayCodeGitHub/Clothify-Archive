@@ -6,11 +6,12 @@ interface CartProviderProps {
 
 interface CartContextProps {
   cart: {
-    title: string;
+    name: string;
     slug: string;
     img: string;
-    price: string;
+    price: number;
     description: string;
+    quantity: number;
   }[];
   toggleCart: () => void;
 }
@@ -21,11 +22,20 @@ const CartContext = React.createContext<CartContextProps>(
 
 const defaultState = [
   {
-    title: "T-Shirt",
+    name: "T-Shirt",
     slug: "t-shirt",
     img: "/Items/t-shirt.jpeg",
-    price: "12$",
+    price: 12,
     description: "ednwrn",
+    quantity: 2,
+  },
+  {
+    name: "T-Shirt",
+    slug: "t-shirt",
+    img: "/Items/t-shirt.jpeg",
+    price: 12,
+    description: "ednwrn",
+    quantity: 2,
   },
 ];
 

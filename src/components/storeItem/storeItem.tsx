@@ -1,13 +1,13 @@
-import { Wrapper, StyledImage, Title, Price } from "./storeItem.styles";
+import { Wrapper, StyledImage, Name, Price } from "./storeItem.styles";
 
 interface StoreItemProps {
   slug: string;
-  title: string;
+  name: string;
   img: string;
   price: string;
 }
 
-export default function StoreItem({ slug, title, img, price }: StoreItemProps) {
+export default function StoreItem({ slug, name, img, price }: StoreItemProps) {
   return (
     <Wrapper href={slug}>
       <StyledImage
@@ -18,7 +18,7 @@ export default function StoreItem({ slug, title, img, price }: StoreItemProps) {
         blurDataURL="data:..."
         placeholder="blur"
       />
-      <Title>{title}</Title>
+      <Name>{name}</Name>
       <Price>{price}</Price>
     </Wrapper>
   );

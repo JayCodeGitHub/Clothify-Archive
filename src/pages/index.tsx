@@ -8,7 +8,7 @@ export default function HomePage() {
       {StoreItems.map(({ slug, title, img, price }) => (
         <StoreItem
           slug={slug}
-          title={title}
+          name={title}
           img={img}
           price={price}
           key={title}
