@@ -6,6 +6,7 @@ interface CartProviderProps {
 
 interface CartContextProps {
   cart: {
+    id: number;
     name: string;
     slug: string;
     img: string;
@@ -13,7 +14,8 @@ interface CartContextProps {
     description: string;
     quantity: number;
   }[];
-  toggleCart: () => void;
+  quantityIncrementation: (id: number, quantity: number) => void;
+  quantityDecrementation: (id: number, quantity: number) => void;
 }
 
 const CartContext = React.createContext<CartContextProps>(
@@ -22,14 +24,7 @@ const CartContext = React.createContext<CartContextProps>(
 
 const defaultState = [
   {
-    name: "T-Shirt",
-    slug: "t-shirt",
-    img: "/Items/t-shirt.jpeg",
-    price: 12,
-    description: "ednwrn",
-    quantity: 2,
-  },
-  {
+    id: 1,
     name: "T-Shirt",
     slug: "t-shirt",
     img: "/Items/t-shirt.jpeg",
@@ -41,12 +36,36 @@ const defaultState = [
 
 export const CartProvider = ({ children }: CartProviderProps) => {
   const [cart, setCart] = useState(defaultState);
-  const toggleCart = () => {
-    console.log("cart");
-  };
+  function quantityIncrementation(id: number, quantity: number) {
+    const newCart = cart.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          quantity: item.quantity + quantity,
+        };
+      }
+      return item;
+    });
+    setCart(newCart);
+  }
+
+  function quantityDecrementation(id: number, quantity: number) {
+    const newCart = cart.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          quantity: item.quantity - quantity,
+        };
+      }
+      return item;
+    });
+    setCart(newCart);
+  }
 
   return (
-    <CartContext.Provider value={{ cart, toggleCart }}>
+    <CartContext.Provider
+      value={{ cart, quantityIncrementation, quantityDecrementation }}
+    >
       {children}
     </CartContext.Provider>
   );

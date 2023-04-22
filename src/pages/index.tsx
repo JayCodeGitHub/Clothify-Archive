@@ -5,14 +5,8 @@ import { StoreItems } from "@/assets/storeItems";
 export default function HomePage() {
   return (
     <Wrapper>
-      {StoreItems.map(({ slug, title, img, price }) => (
-        <StoreItem
-          slug={slug}
-          name={title}
-          img={img}
-          price={price}
-          key={title}
-        />
+      {StoreItems.map(({ slug, name, img, price }) => (
+        <StoreItem key={name} slug={slug} name={name} img={img} price={price} />
       ))}
     </Wrapper>
   );

@@ -8,14 +8,17 @@ import {
   Quantity,
   Description,
 } from "./cartItem.styles";
+import { useCart } from "@/hooks/useCart";
 
 interface CartItemProps {
+  id: number;
   name: string;
   quantity: number;
   price: number;
 }
 
-export default function CartItem({ name, price, quantity }: CartItemProps) {
+export default function CartItem({ id, name, price, quantity }: CartItemProps) {
+  const { quantityIncrementation, quantityDecrementation } = useCart();
   return (
     <Wrapper>
       <StyledImage
@@ -31,7 +34,7 @@ export default function CartItem({ name, price, quantity }: CartItemProps) {
         <Price>{price}$</Price>
         <QuantityWrapper>
           Quantity:
-          <IconWrapper>
+          <IconWrapper onClick={() => quantityDecrementation(id, 1)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -47,7 +50,7 @@ export default function CartItem({ name, price, quantity }: CartItemProps) {
             </svg>
           </IconWrapper>
           <Quantity>{quantity}</Quantity>
-          <IconWrapper>
+          <IconWrapper onClick={() => quantityIncrementation(id, 1)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

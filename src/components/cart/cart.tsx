@@ -16,7 +16,8 @@ export default function Cart({ isCart, setIsCart }: CartProps) {
       <Wrapper isCart={isCart}>
         {cart.map((item) => (
           <CartItem
-            key={item.name}
+            key={item.id}
+            id={item.id}
             name={item.name}
             quantity={item.quantity}
             price={item.price}
