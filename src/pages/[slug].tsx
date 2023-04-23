@@ -11,6 +11,7 @@ import {
 import Button from "@/components/button/button.styles";
 import { useCart } from "@/hooks/useCart";
 import { useAlert } from "@/hooks/useAlert";
+import { motion } from "framer-motion";
 
 export async function getStaticPaths() {
   return {
@@ -27,17 +28,24 @@ export async function getStaticProps({ params }: any) {
   };
 }
 
+const MotionWrapper = motion(Wrapper);
+
 export default function Item({ item }: any) {
   const [count, setCount] = useState(1);
   const { dispatchAlert } = useAlert();
-  const { addItem, cart } = useCart();
+  const { addItem } = useCart();
   const addToCart = () => {
     addItem(item, count);
     dispatchAlert(item.name);
     setCount(1);
   };
   return (
-    <Wrapper>
+    <MotionWrapper
+      initial={{ opacity: "0%" }}
+      animate={{ opacity: "100%" }}
+      transition={{ duration: 0.4, delay: 0.4, ease: "easeInOut" }}
+      exit={{ opacity: "0%" }}
+    >
       <StyledImage
         src={item.img}
         alt="Picture of the author"
@@ -87,6 +95,6 @@ export default function Item({ item }: any) {
         </QuantityWrapper>
         <Button onClick={addToCart}>Add to cart</Button>
       </DescriptionWrapper>
-    </Wrapper>
+    </MotionWrapper>
   );
 }

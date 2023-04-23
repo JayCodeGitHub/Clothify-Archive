@@ -3,8 +3,9 @@ import type { AppProps } from "next/app";
 import Layout from "@/components/layout/layout";
 import { CartProvider } from "@/hooks/useCart";
 import { AlertProvider } from "@/hooks/useAlert";
+import { AnimatePresence } from "framer-motion";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Head>
@@ -16,7 +17,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <CartProvider>
         <AlertProvider>
           <Layout>
-            <Component {...pageProps} />
+            <AnimatePresence mode={"wait"}>
+              <Component key={router.pathname} {...pageProps} />
+            </AnimatePresence>
           </Layout>
         </AlertProvider>
       </CartProvider>
