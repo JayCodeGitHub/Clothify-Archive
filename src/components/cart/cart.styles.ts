@@ -18,6 +18,7 @@ export const Background = styled.div<{isCart: boolean}>`
 `
 
 export const Wrapper = styled.section<{isCart: boolean}>`
+   overflow: scroll;
     position: fixed;
     height: 100vh;
     top: 0;
