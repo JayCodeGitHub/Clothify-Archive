@@ -1,4 +1,10 @@
-import { Background, OuterWrapper, Wrapper, Subtotal } from "./cart.styles";
+import {
+  Background,
+  OuterWrapper,
+  Wrapper,
+  Subtotal,
+  ButtonWrapper,
+} from "./cart.styles";
 import CartItem from "../cartItem/cartItem";
 import Button from "../button/button.styles";
 import { useCart } from "@/hooks/useCart";
@@ -30,7 +36,9 @@ export default function Cart({ isCart, setIsCart }: CartProps) {
           />
         ))}
         <Subtotal>Subtotal: {subtotal()}$</Subtotal>
-        <Button>Purchase</Button>
+        <ButtonWrapper href="/purchase" onClick={() => setIsCart(false)}>
+          <Button>Purchase</Button>
+        </ButtonWrapper>
       </Wrapper>
     </OuterWrapper>
   );

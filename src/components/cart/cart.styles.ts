@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Link from "next/link";
 
 export const OuterWrapper = styled.div`
     position: fixed;
@@ -42,4 +43,10 @@ export const Wrapper = styled.section<{isCart: boolean}>`
 export const Subtotal = styled.p`
     align-self: flex-start;
     padding: 1rem 0  0 10%;
+`
+
+export const ButtonWrapper = styled(Link)`
+    width: 100%;
+    display: flex;
+    justify-content: center;
 `
