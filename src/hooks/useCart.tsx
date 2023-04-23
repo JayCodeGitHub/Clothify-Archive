@@ -52,16 +52,24 @@ export const CartProvider = ({ children }: CartProviderProps) => {
   }
 
   function quantityDecrementation(id: number, quantity: number) {
+    let remove = false;
     const newCart = cart.map((item) => {
       if (item.id === id) {
-        return {
-          ...item,
-          quantity: item.quantity - quantity,
-        };
+        if (item.quantity === 1) {
+          remove = true;
+        } else {
+          return {
+            ...item,
+            quantity: item.quantity - quantity,
+          };
+        }
       }
       return item;
     });
     setCart(newCart);
+    if (remove) {
+      removeItem(id);
+    }
   }
 
   function addItem(newItem: any, quantity: number) {
