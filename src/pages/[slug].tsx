@@ -57,10 +57,13 @@ export default function Item({ item }: any) {
       <DescriptionWrapper>
         <h1>{item.name}</h1>
         <p>{item.description}</p>
-        <h3>{item.price}$</h3>
+        <h2>{item.price}$</h2>
         <QuantityWrapper>
           Quantity:
-          <IconWrapper onClick={() => setCount(count - 1)}>
+          <IconWrapper
+            aria-label="button with a minus icon to reduce the amount of product"
+            onClick={() => setCount(count - 1)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -76,7 +79,10 @@ export default function Item({ item }: any) {
             </svg>
           </IconWrapper>
           <Quantity>{count}</Quantity>
-          <IconWrapper onClick={() => setCount(count + 1)}>
+          <IconWrapper
+            aria-label="button with a plus icon to increase the amount of product"
+            onClick={() => setCount(count + 1)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

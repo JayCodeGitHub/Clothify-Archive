@@ -42,7 +42,10 @@ export default function CartItem({
         <Price>{price}$</Price>
         <QuantityWrapper>
           Quantity:
-          <IconWrapper onClick={() => quantityDecrementation(id, 1)}>
+          <IconWrapper
+            aria-label="button with a minus icon to reduce the amount of product"
+            onClick={() => quantityDecrementation(id, 1)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -58,7 +61,10 @@ export default function CartItem({
             </svg>
           </IconWrapper>
           <Quantity>{quantity}</Quantity>
-          <IconWrapper onClick={() => quantityIncrementation(id, 1)}>
+          <IconWrapper
+            aria-label="button with a plus icon to increase the amount of product"
+            onClick={() => quantityIncrementation(id, 1)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
