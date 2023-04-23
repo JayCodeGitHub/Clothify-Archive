@@ -24,17 +24,7 @@ const CartContext = React.createContext<CartContextProps>(
   {} as CartContextProps
 );
 
-const defaultState = [
-  {
-    id: 1,
-    name: "T-Shirt",
-    slug: "t-shirt",
-    img: "/Items/t-shirt.jpeg",
-    price: 12,
-    description: "ednwrn",
-    quantity: 2,
-  },
-];
+const defaultState: any[] | (() => any[]) = [];
 
 export const CartProvider = ({ children }: CartProviderProps) => {
   const [cart, setCart] = useState(defaultState);

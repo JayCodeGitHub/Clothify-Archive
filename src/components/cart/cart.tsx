@@ -29,10 +29,7 @@ export default function Cart({ isCart, setIsCart }: CartProps) {
             price={item.price}
           />
         ))}
-        <Subtotal>
-          Subtotal:
-          {subtotal()}$
-        </Subtotal>
+        <Subtotal>Subtotal: {subtotal()}$</Subtotal>
         <Button>Purchase</Button>
       </Wrapper>
     </OuterWrapper>
