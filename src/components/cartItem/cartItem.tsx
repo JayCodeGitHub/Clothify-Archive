@@ -25,9 +25,10 @@ export default function CartItem({
   price,
   quantity,
 }: CartItemProps) {
-  const { quantityIncrementation, quantityDecrementation } = useCart();
+  const { quantityIncrementation, quantityDecrementation, removeItem } =
+    useCart();
   return (
-    <Wrapper>
+    <Wrapper onClick={() => removeItem(id)}>
       <StyledImage
         src={img}
         alt="Item Image"
