@@ -1,7 +1,9 @@
+import { Wrapper } from "./alert.styles";
+
 export default function Alert() {
   return (
-    <div>
+    <Wrapper role="alert">
       <h1>Alert</h1>
-    </div>
+    </Wrapper>
   );
 }
