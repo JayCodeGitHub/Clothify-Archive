@@ -30,6 +30,7 @@ export const DescriptionWrapper = styled.div`
     padding: 2rem 0;
     flex-direction: column;
     justify-content: space-around;
+    font-size: ${({ theme }) => theme.font.size.s};
     gap: 0.5rem;
     ${({ theme }) => theme.mq.desktop} {
         height: 20rem;

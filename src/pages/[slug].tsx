@@ -56,7 +56,7 @@ export default function Item({ item }: any) {
       />
       <DescriptionWrapper>
         <h1>{item.name}</h1>
-        <h2>{item.description}</h2>
+        <p>{item.description}</p>
         <h3>{item.price}$</h3>
         <QuantityWrapper>
           Quantity:
