@@ -4,7 +4,7 @@ interface StoreItemProps {
   slug: string;
   name: string;
   img: string;
-  price: string;
+  price: number;
 }
 
 export default function StoreItem({ slug, name, img, price }: StoreItemProps) {
@@ -19,7 +19,7 @@ export default function StoreItem({ slug, name, img, price }: StoreItemProps) {
         placeholder="blur"
       />
       <Name>{name}</Name>
-      <Price>{price}</Price>
+      <Price>{price}$</Price>
     </Wrapper>
   );
 }

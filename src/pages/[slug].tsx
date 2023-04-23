@@ -47,7 +47,7 @@ export default function Item({ item }: any) {
       <DescriptionWrapper>
         <h1>{item.name}</h1>
         <h2>{item.description}</h2>
-        <h3>{item.price}</h3>
+        <h3>{item.price}$</h3>
         <QuantityWrapper>
           Quantity:
           <IconWrapper onClick={() => setCount(count - 1)}>

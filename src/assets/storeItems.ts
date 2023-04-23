@@ -4,7 +4,7 @@ export const StoreItems = [
         name: "T-Shirt",
         slug: 't-shirt',
         img: "/Items/t-shirt.jpeg",
-        price: "12$",
+        price: 12,
         description: "ednwrn",
         quantity: 1
     },
@@ -13,7 +13,7 @@ export const StoreItems = [
         name: "Red Hat",
         slug: 'red-hat',
         img: "/Items/hat.jpeg",
-        price: "20$",
+        price: 20,
         description: "ashrewh",
         quantity: 1
     },
@@ -22,7 +22,7 @@ export const StoreItems = [
         name: "Jacket",
         slug: 'jacket',
         img: "/Items/jacket.jpeg",
-        price: "45$",
+        price: 45,
         description: "waerh",
         quantity: 1
     },
@@ -31,7 +31,7 @@ export const StoreItems = [
         name: "Jean Jacket",
         slug: 'jean-jacket',
         img: "/Items/jean-jacket.jpeg",
-        price: "40$",
+        price: 40,
         description: "eber",
         quantity: 1
     },
@@ -40,7 +40,7 @@ export const StoreItems = [
         name: "Sweatshirt",
         slug: 'sweatshirt',
         img: "/Items/sweatshirt.jpeg",
-        price: "30$",
+        price: 30,
         description: "bewrb",
         quantity: 1
     },
@@ -49,7 +49,7 @@ export const StoreItems = [
         name: "Trousers",
         slug: 'trousers',
         img: "/Items/trousers.jpeg",
-        price: "20$",
+        price: 20,
         description: "ehewr",
         quantity: 1
     },

@@ -9,7 +9,11 @@ interface CartProps {
 }
 
 export default function Cart({ isCart, setIsCart }: CartProps) {
-  let subtotal = 0;
+  function subtotal() {
+    let current = 0;
+    cart.map((item) => (current += item.price * item.quantity));
+    return current;
+  }
   const { cart } = useCart();
   return (
     <OuterWrapper>
@@ -27,7 +31,7 @@ export default function Cart({ isCart, setIsCart }: CartProps) {
         ))}
         <Subtotal>
           Subtotal:
-          {cart.map((item) => (subtotal += item.price * item.quantity))}$
+          {subtotal()}$
         </Subtotal>
         <Button>Purchase</Button>
       </Wrapper>
