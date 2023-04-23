@@ -18,7 +18,7 @@ export const Background = styled.div<{isCart: boolean}>`
 `
 
 export const Wrapper = styled.section<{isCart: boolean}>`
-   overflow: scroll;
+   overflow: auto;
     position: fixed;
     height: 100vh;
     top: 0;
@@ -31,7 +31,7 @@ export const Wrapper = styled.section<{isCart: boolean}>`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2rem;
+    padding: 2rem 0;
     gap: 2rem;
     ${({ theme }) => theme.mq.desktop} {
         width: 35%;
