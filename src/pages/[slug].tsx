@@ -43,7 +43,7 @@ export default function Item({ item }: any) {
     <MotionWrapper
       initial={{ opacity: "0%" }}
       animate={{ opacity: "100%" }}
-      transition={{ duration: 0.4, delay: 0.4, ease: "easeInOut" }}
+      transition={{ duration: 0.2, delay: 0.2, ease: "easeInOut" }}
       exit={{ opacity: "0%" }}
     >
       <StyledImage
