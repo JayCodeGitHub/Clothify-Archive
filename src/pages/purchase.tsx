@@ -26,7 +26,6 @@ export default function PurchasePage() {
         ))}
       </CartSection>
       <FormSection>
-        <Title>Payment</Title>
         <Form />
       </FormSection>
     </Wrapper>

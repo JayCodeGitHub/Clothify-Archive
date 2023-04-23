@@ -15,12 +15,12 @@ interface CartProps {
 }
 
 export default function Cart({ isCart, setIsCart }: CartProps) {
+  const { cart } = useCart();
   function subtotal() {
     let current = 0;
     cart.map((item) => (current += item.price * item.quantity));
     return current;
   }
-  const { cart } = useCart();
   return (
     <OuterWrapper>
       <Background isCart={isCart} onClick={() => setIsCart(false)} />

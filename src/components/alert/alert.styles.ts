@@ -16,7 +16,6 @@ export const Wrapper = styled.aside`
     display: flex;
     align-items: center;
     background-color: white;
-    width: 300px;
     padding: 20px;
     border-radius: 1rem;
     gap: 1rem;

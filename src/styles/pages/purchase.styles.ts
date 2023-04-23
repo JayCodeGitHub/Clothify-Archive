@@ -29,7 +29,9 @@ export const Title = styled.h1`
 `
 
 export const FormSection = styled.form`
-    width: 35rem;
-    height: 40rem;
+
     padding: 1.5rem 0;
+    ${({ theme }) => theme.mq.desktop} {
+        width: 35rem;
+    }
 `
