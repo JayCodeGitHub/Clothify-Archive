@@ -1,6 +1,10 @@
 import { Wrapper, IconWrapper } from "./alert.styles";
 
-export default function Alert() {
+interface AlertProps {
+  message: string;
+}
+
+export default function Alert({ message }: AlertProps) {
   return (
     <Wrapper role="alert">
       <IconWrapper>
@@ -18,7 +22,7 @@ export default function Alert() {
           <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
       </IconWrapper>
-      <p>Red Hat added to your cart</p>
+      <p>{message} added to your cart</p>
     </Wrapper>
   );
 }

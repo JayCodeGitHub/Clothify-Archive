@@ -1,6 +1,8 @@
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import Layout from "@/components/layout/layout";
+import { CartProvider } from "@/hooks/useCart";
+import { AlertProvider } from "@/hooks/useAlert";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -11,9 +13,13 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <CartProvider>
+        <AlertProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </AlertProvider>
+      </CartProvider>
     </>
   );
 }

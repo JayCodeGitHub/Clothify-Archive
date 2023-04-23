@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "@/styles/globalStyles";
 import { theme } from "@/styles/theme";
-import { CartProvider } from "@/hooks/useCart";
+import { useAlert } from "@/hooks/useAlert";
 import Alert from "../alert/alert";
 
 interface LayoutProps {
@@ -12,14 +12,13 @@ interface LayoutProps {
 const NavBar = dynamic(() => import("../navbar/navbar"), { ssr: false });
 
 export default function Layout({ children }: LayoutProps) {
+  const { alert } = useAlert();
   return (
-    <CartProvider>
-      <ThemeProvider theme={theme}>
-        <Alert />
-        <GlobalStyle />
-        <NavBar />
-        {children}
-      </ThemeProvider>
-    </CartProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      {alert ? <Alert message={alert} /> : null}
+      <NavBar />
+      {children}
+    </ThemeProvider>
   );
 }

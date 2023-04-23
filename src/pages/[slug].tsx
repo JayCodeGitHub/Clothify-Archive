@@ -10,6 +10,7 @@ import {
 } from "@/styles/pages/item.styles";
 import Button from "@/components/button/button.styles";
 import { useCart } from "@/hooks/useCart";
+import { useAlert } from "@/hooks/useAlert";
 
 export async function getStaticPaths() {
   return {
@@ -28,9 +29,11 @@ export async function getStaticProps({ params }: any) {
 
 export default function Item({ item }: any) {
   const [count, setCount] = useState(1);
+  const { dispatchAlert } = useAlert();
   const { addItem, cart } = useCart();
   const addToCart = () => {
     addItem(item, count);
+    dispatchAlert(item.name);
     setCount(1);
   };
   console.log(cart);
