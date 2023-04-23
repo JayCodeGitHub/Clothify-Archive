@@ -6,6 +6,7 @@ import {
 } from "@/styles/pages/purchase.styles";
 import { useCart } from "@/hooks/useCart";
 import CartItem from "@/components/cartItem/cartItem";
+import Form from "@/components/form/form";
 
 export default function PurchasePage() {
   const { cart } = useCart();
@@ -26,6 +27,7 @@ export default function PurchasePage() {
       </CartSection>
       <FormSection>
         <Title>Payment</Title>
+        <Form />
       </FormSection>
     </Wrapper>
   );
