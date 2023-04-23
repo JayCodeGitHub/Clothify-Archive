@@ -36,7 +36,6 @@ export default function Item({ item }: any) {
     dispatchAlert(item.name);
     setCount(1);
   };
-  console.log(cart);
   return (
     <Wrapper>
       <StyledImage
