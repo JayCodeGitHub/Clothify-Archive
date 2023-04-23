@@ -22,13 +22,14 @@ export const Wrapper = styled(Link)`
 `
 
 export const StyledImage = styled(Image)`
-    width: 100%;
+    width: 80vw;
     height: 28rem;
     object-fit: cover;
     border-radius: 0.2rem;
     align-self: center;
     ${({ theme }) => theme.mq.desktop} {
         height: 18rem;
+        width: 100%;
     }
 `
 

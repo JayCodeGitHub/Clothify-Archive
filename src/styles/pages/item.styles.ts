@@ -16,6 +16,7 @@ export const Wrapper = styled.main`
 
 export const StyledImage = styled(Image)`
     width: 90vw;
+    height: 128vw;
     object-fit: cover;
     border-radius: 0.2rem;
     align-self: center;
