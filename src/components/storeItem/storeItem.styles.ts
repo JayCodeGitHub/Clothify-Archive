@@ -1,7 +1,8 @@
 import styled from 'styled-components'
-import Image from "next/image";
+import Image from "next/image"
+import Link from "next/link";
 
-export const Wrapper = styled.a`
+export const Wrapper = styled(Link)`
     display: flex;
     border-radius: 1rem;
     background-color: ${({ theme }) => theme.light};

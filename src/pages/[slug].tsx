@@ -28,11 +28,12 @@ export async function getStaticProps({ params }: any) {
 
 export default function Item({ item }: any) {
   const [count, setCount] = useState(1);
-  const { addItem } = useCart();
+  const { addItem, cart } = useCart();
   const addToCart = () => {
     addItem(item, count);
     setCount(1);
   };
+  console.log(cart);
   return (
     <Wrapper>
       <StyledImage
@@ -82,7 +83,7 @@ export default function Item({ item }: any) {
             </svg>
           </IconWrapper>
         </QuantityWrapper>
-        <Button onClick={() => addToCart()}>Add to cart</Button>
+        <Button onClick={addToCart}>Add to cart</Button>
       </DescriptionWrapper>
     </Wrapper>
   );
