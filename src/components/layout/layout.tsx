@@ -4,6 +4,7 @@ import { GlobalStyle } from "@/styles/globalStyles";
 import { theme } from "@/styles/theme";
 import { useAlert } from "@/hooks/useAlert";
 import Alert from "../alert/alert";
+import Footer from "../footer/footer";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -19,6 +20,7 @@ export default function Layout({ children }: LayoutProps) {
       {alert ? <Alert message={alert} /> : null}
       <NavBar />
       {children}
+      <Footer />
     </ThemeProvider>
   );
 }
