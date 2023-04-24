@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 import Home from "@/pages/index";
 import { theme } from "@/styles/theme";
