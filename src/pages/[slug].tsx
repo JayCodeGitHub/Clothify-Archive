@@ -35,9 +35,11 @@ export default function Item({ item }: any) {
   const { dispatchAlert } = useAlert();
   const { addItem } = useCart();
   const addToCart = () => {
-    addItem(item, count);
-    dispatchAlert(item.name);
-    setCount(1);
+    if (count > 0) {
+      addItem(item, count);
+      dispatchAlert(item.name);
+      setCount(1);
+    }
   };
   return (
     <MotionWrapper
