@@ -3,7 +3,9 @@ import { Wrapper } from "./footer.styles";
 export default function Footer() {
   return (
     <Wrapper>
-      <h1>Footer</h1>
+      <a href="https://jaycode.pl/">
+        <p>Created by JayCode</p>
+      </a>
     </Wrapper>
   );
 }
