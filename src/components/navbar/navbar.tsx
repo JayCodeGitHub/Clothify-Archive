@@ -7,9 +7,12 @@ import {
   NavigationItem,
 } from "./navbar.styles";
 import Cart from "../cart/cart";
+import { useCart } from "@/hooks/useCart";
 
 export default function NavBar() {
   const [isCart, setIsCart] = useState(false);
+  const { cart } = useCart();
+  console.log(cart.length);
   return (
     <OuterWrapper>
       <Wrapper>
@@ -20,7 +23,7 @@ export default function NavBar() {
           <Link href="/about">About Us</Link>
         </NavigationItem>
       </Wrapper>
-      <CartIcon onClick={() => setIsCart(true)}>
+      <CartIcon quantity={cart.length} onClick={() => setIsCart(true)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

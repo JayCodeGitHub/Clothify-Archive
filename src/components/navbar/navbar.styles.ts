@@ -27,24 +27,43 @@ export const NavigationItem = styled.li`
     &:hover{
         color: ${({ theme }) => theme.primary};
     }
-
 `
 
-export const CartIcon = styled.span`
+interface Props {
+    quantity: any;
+  }
+
+export const CartIcon = styled.span<Props>`
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: ${({ theme }) => theme.font.size.xs};
+    position: relative;
     cursor: pointer;
+    transition: color 0.1s ease-in-out;
+    svg {
+        transition: stroke 0.1s ease-in-out;
+    }
     &:hover{
         color: ${({ theme }) => theme.primary};
         svg {
             stroke: ${({ theme }) => theme.primary};
         }
     }
-    transition: color 0.1s ease-in-out;
-    svg {
-        transition: stroke 0.1s ease-in-out;
+    &:before{
+        content: "${props => props.quantity}";
+        color: ${({ theme }) => theme.light};
+        display: ${props => props.quantity > 0 ?  "flex" : "none"};
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        position: absolute;
+        transform: translate(50%, -50%);
+        top: 0;
+        right: 0;
+        background-color: red;
     }
 `
