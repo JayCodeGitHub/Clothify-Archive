@@ -5,8 +5,9 @@ import Image from "next/image";
 export const Wrapper = styled.main`
     display: flex;
     width: 100%;
+    min-height: 80vh;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     ${({ theme }) => theme.mq.desktop} {
         flex-direction: row;
@@ -19,7 +20,6 @@ export const StyledImage = styled(Image)`
     height: 128vw;
     object-fit: cover;
     border-radius: 0.2rem;
-    align-self: center;
     ${({ theme }) => theme.mq.desktop} {
         height: 30rem;
         width: 30rem;

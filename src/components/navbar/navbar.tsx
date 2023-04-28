@@ -12,7 +12,6 @@ import { useCart } from "@/hooks/useCart";
 export default function NavBar() {
   const [isCart, setIsCart] = useState(false);
   const { cart } = useCart();
-  console.log(cart.length);
   return (
     <OuterWrapper>
       <Wrapper>
