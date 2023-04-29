@@ -16,6 +16,7 @@ export default function PurchasePage() {
         <StyledTitle>Your order</StyledTitle>
         {cart.map((item) => (
           <CartItem
+            secondary
             key={item.id}
             id={item.id}
             img={item.img}
