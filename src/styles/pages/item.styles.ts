@@ -10,8 +10,8 @@ export const StyledWrapper = styled.main`
     width: 100%;
     min-height: 80vh;
     ${({ theme }) => theme.mq.desktop} {
-        align-items: flex-start;
         flex-direction: row;
+        align-items: flex-start;
         gap: 10rem;
     }
 `
