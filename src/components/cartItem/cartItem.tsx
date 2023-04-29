@@ -1,12 +1,12 @@
 import {
-  Wrapper,
+  StyledWrapper,
   StyledImage,
-  Name,
-  Price,
-  QuantityWrapper,
-  IconWrapper,
-  Quantity,
-  Description,
+  StyledName,
+  StyledPrice,
+  StyledQuantityWrapper,
+  StyledIconWrapper,
+  StyledQuantity,
+  StyledDescription,
 } from "./cartItem.styles";
 import { useCart } from "@/hooks/useCart";
 
@@ -28,7 +28,7 @@ export default function CartItem({
   const { quantityIncrementation, quantityDecrementation, removeItem } =
     useCart();
   return (
-    <Wrapper>
+    <StyledWrapper>
       <StyledImage
         src={img}
         alt="Item Image"
@@ -37,12 +37,12 @@ export default function CartItem({
         blurDataURL="data:..."
         placeholder="blur"
       />
-      <Description>
-        <Name>{name}</Name>
-        <Price>{price}$</Price>
-        <QuantityWrapper>
+      <StyledDescription>
+        <StyledName>{name}</StyledName>
+        <StyledPrice>{price}$</StyledPrice>
+        <StyledQuantityWrapper>
           Quantity:
-          <IconWrapper
+          <StyledIconWrapper
             aria-label="button with a minus icon to reduce the amount of product"
             onClick={() => quantityDecrementation(id, 1)}
           >
@@ -59,9 +59,9 @@ export default function CartItem({
             >
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
-          </IconWrapper>
-          <Quantity>{quantity}</Quantity>
-          <IconWrapper
+          </StyledIconWrapper>
+          <StyledQuantity>{quantity}</StyledQuantity>
+          <StyledIconWrapper
             aria-label="button with a plus icon to increase the amount of product"
             onClick={() => quantityIncrementation(id, 1)}
           >
@@ -79,9 +79,9 @@ export default function CartItem({
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
-          </IconWrapper>
-        </QuantityWrapper>
-      </Description>
-    </Wrapper>
+          </StyledIconWrapper>
+        </StyledQuantityWrapper>
+      </StyledDescription>
+    </StyledWrapper>
   );
 }
