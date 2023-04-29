@@ -1,50 +1,43 @@
 import styled from 'styled-components'
 
-export const OuterWrapper = styled.nav`
-    width: 100%;
-    height: 8rem;
-    font-weight: 500;
+export const StyledOuterWrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 8rem;
     padding: 0 10%;
+    font-weight: 500;
     background-color: ${({ theme }) => theme.secondary};
 `
 
-export const Wrapper = styled.ul`
+export const StyledWrapper = styled.ul`
     display: flex;
     gap: 1.5rem;
+    font-size: ${({ theme }) => theme.font.size.s};
     list-style: none;
     color: ${({ theme }) => theme.dark};
-    font-size: ${({ theme }) => theme.font.size.s};
     ${({ theme }) => theme.mq.desktop} {
         font-size: ${({ theme }) => theme.font.size.s};
     }
 `
 
-export const NavigationItem = styled.li`
-   transition: color 0.1s ease-in-out;
+export const StyledNavigationItem = styled.li`
+    transition: color 0.1s ease-in-out;
     &:hover{
         color: ${({ theme }) => theme.primary};
     }
 `
 
-interface Props {
-    quantity: any;
-  }
-
-export const CartIcon = styled.span<Props>`
+export const StyledCartIcon = styled.span<{quantity: any}>`
     display: flex;
+    position: relative;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     font-size: ${({ theme }) => theme.font.size.xs};
-    position: relative;
     cursor: pointer;
     transition: color 0.1s ease-in-out;
-    svg {
-        transition: stroke 0.1s ease-in-out;
-    }
     &:hover{
         color: ${({ theme }) => theme.primary};
         svg {
@@ -53,17 +46,20 @@ export const CartIcon = styled.span<Props>`
     }
     &:before{
         content: "${props => props.quantity}";
-        color: ${({ theme }) => theme.light};
         display: ${props => props.quantity > 0 ?  "flex" : "none"};
-        justify-content: center;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-        border-radius: 100%;
         position: absolute;
-        transform: translate(50%, -50%);
+        align-items: center;
+        justify-content: center;
         top: 0;
         right: 0;
+        width: 20px;
+        height: 20px;
+        color: ${({ theme }) => theme.light};
+        border-radius: 100%;
         background-color: red;
+        transform: translate(50%, -50%);
+    }
+    svg {
+        transition: stroke 0.1s ease-in-out;
     }
 `
