@@ -1,9 +1,9 @@
 import {
-  Background,
-  OuterWrapper,
-  Wrapper,
-  Subtotal,
-  ButtonWrapper,
+  StyledBackground,
+  StyledOuterWrapper,
+  StyledWrapper,
+  StyledSubtotal,
+  StyledButtonWrapper,
 } from "./cart.styles";
 import CartItem from "../cartItem/cartItem";
 import Button from "../button/button.styles";
@@ -22,9 +22,9 @@ export default function Cart({ isCart, setIsCart }: CartProps) {
     return current;
   }
   return (
-    <OuterWrapper>
-      <Background isCart={isCart} onClick={() => setIsCart(false)} />
-      <Wrapper isCart={isCart}>
+    <StyledOuterWrapper>
+      <StyledBackground isCart={isCart} onClick={() => setIsCart(false)} />
+      <StyledWrapper isCart={isCart}>
         {cart.map((item) => (
           <CartItem
             key={item.id}
@@ -35,11 +35,11 @@ export default function Cart({ isCart, setIsCart }: CartProps) {
             price={item.price}
           />
         ))}
-        <Subtotal>Subtotal: {subtotal()}$</Subtotal>
-        <ButtonWrapper href="/purchase" onClick={() => setIsCart(false)}>
+        <StyledSubtotal>Subtotal: {subtotal()}$</StyledSubtotal>
+        <StyledButtonWrapper href="/purchase" onClick={() => setIsCart(false)}>
           <Button>Purchase</Button>
-        </ButtonWrapper>
-      </Wrapper>
-    </OuterWrapper>
+        </StyledButtonWrapper>
+      </StyledWrapper>
+    </StyledOuterWrapper>
   );
 }
