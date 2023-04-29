@@ -38,7 +38,7 @@ export default function Item({ item }: any) {
     setCount(1);
     if (count > 0) {
       addItem(item, count);
-      dispatchAlert(item.name);
+      dispatchAlert(`${item.name} added to your cart`);
     }
   };
   return (

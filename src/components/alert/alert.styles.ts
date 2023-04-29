@@ -11,27 +11,27 @@ const intro = keyframes`
   }
 `;
 
-export const Wrapper = styled.aside`
-    position: fixed;
+export const StyledWrapper = styled.aside`
     display: flex;
+    position: fixed;
     align-items: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 1rem;
     gap: 1rem;
     top: 2rem;
     left: 50%;
-    transform: translateX(-50%);
+    padding: 20px;
     font-size: ${({ theme }) => theme.font.size.s};
+    background-color: white;
     animation: ${intro} 0.2s linear;
+    border-radius: 1rem;
+    transform: translateX(-50%);
 `
 
-export const IconWrapper = styled.span`
-    background-color: #00BF00;
+export const StyledIconWrapper = styled.span`
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 30px;
     height: 30px;
+    background-color: #00BF00;
     border-radius: 50%;
 `

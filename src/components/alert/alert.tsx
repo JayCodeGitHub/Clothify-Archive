@@ -1,4 +1,4 @@
-import { Wrapper, IconWrapper } from "./alert.styles";
+import { StyledWrapper, StyledIconWrapper } from "./alert.styles";
 
 interface AlertProps {
   message: string;
@@ -6,8 +6,8 @@ interface AlertProps {
 
 export default function Alert({ message }: AlertProps) {
   return (
-    <Wrapper role="alert">
-      <IconWrapper>
+    <StyledWrapper role="alert">
+      <StyledIconWrapper>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -21,8 +21,8 @@ export default function Alert({ message }: AlertProps) {
         >
           <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
-      </IconWrapper>
-      <p>{message} added to your cart</p>
-    </Wrapper>
+      </StyledIconWrapper>
+      <p>{message}</p>
+    </StyledWrapper>
   );
 }
