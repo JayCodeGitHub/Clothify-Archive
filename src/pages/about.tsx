@@ -1,8 +1,8 @@
-import { Wrapper, Header } from "@/styles/pages/about.styles";
+import { StyledWrapper, StyledHeader } from "@/styles/pages/about.styles";
 import { AboutItems } from "@/assets/aboutItems";
 import { motion } from "framer-motion";
 
-const MotionWrapper = motion(Wrapper);
+const MotionWrapper = motion(StyledWrapper);
 
 export default function AboutPage() {
   return (
@@ -12,9 +12,9 @@ export default function AboutPage() {
       transition={{ duration: 0.2, delay: 0.2, ease: "easeInOut" }}
       exit={{ opacity: "0%" }}
     >
-      <Header>
+      <StyledHeader>
         <h1>About</h1>
-      </Header>
+      </StyledHeader>
       {AboutItems.map((item) => (
         <>
           <p>{item.paragraph}</p>

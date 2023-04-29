@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.main`
+
+export const StyledWrapper = styled.main`
     width: 100%;
     padding: 2rem 5%;
     min-height: 80vh;
@@ -9,6 +10,6 @@ export const Wrapper = styled.main`
     }
 `
 
-export const Header = styled.header`
+export const StyledHeader = styled.header`
     padding: 2rem;
 `
