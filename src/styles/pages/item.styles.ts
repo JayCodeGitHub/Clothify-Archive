@@ -6,10 +6,11 @@ export const StyledWrapper = styled.main`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     min-height: 80vh;
     ${({ theme }) => theme.mq.desktop} {
+        align-items: flex-start;
         flex-direction: row;
         gap: 10rem;
     }
