@@ -1,9 +1,9 @@
-import { Wrapper } from "@/styles/pages/home.styles";
+import { StyledWrapper } from "@/styles/pages/home.styles";
 import StoreItem from "@/components/storeItem/storeItem";
 import { StoreItems } from "@/assets/storeItems";
 import { motion } from "framer-motion";
 
-const MotionWrapper = motion(Wrapper);
+const MotionWrapper = motion(StyledWrapper);
 
 export default function HomePage() {
   return (
