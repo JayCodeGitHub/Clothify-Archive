@@ -8,6 +8,10 @@ import {
 import CartItem from "../cartItem/cartItem";
 import Button from "../button/button.styles";
 import { useCart } from "@/hooks/useCart";
+import { motion, AnimatePresence } from "framer-motion";
+
+const MotionSubtotal = motion(StyledSubtotal);
+const MotionButtonWrapper = motion(StyledButtonWrapper);
 
 interface CartProps {
   isCart: boolean;
@@ -35,10 +39,20 @@ export default function Cart({ isCart, setIsCart }: CartProps) {
             price={item.price}
           />
         ))}
-        <StyledSubtotal>Subtotal: {subtotal()}$</StyledSubtotal>
-        <StyledButtonWrapper href="/purchase" onClick={() => setIsCart(false)}>
+        <MotionSubtotal
+          layout
+          transition={{ duration: 0.2, delay: 0.1, ease: "easeInOut" }}
+        >
+          Subtotal: {subtotal()}$
+        </MotionSubtotal>
+        <MotionButtonWrapper
+          layout
+          transition={{ duration: 0.2, delay: 0.1, ease: "easeInOut" }}
+          href="/purchase"
+          onClick={() => setIsCart(false)}
+        >
           <Button>Purchase</Button>
-        </StyledButtonWrapper>
+        </MotionButtonWrapper>
       </StyledWrapper>
     </StyledOuterWrapper>
   );

@@ -47,7 +47,6 @@ export const StyledCartIcon = styled.span<{quantity: any}>`
     &:before{
         content: "${props => props.quantity}";
         display: flex;
-        opacity: ${props => props.quantity > 0 ?  "1" : "0"};
         position: absolute;
         align-items: center;
         justify-content: center;
@@ -59,6 +58,7 @@ export const StyledCartIcon = styled.span<{quantity: any}>`
         border-radius: 100%;
         background-color: red;
         transform: translate(50%, -50%);
+        opacity: ${props => props.quantity > 0 ?  "1" : "0"};
         transition: opacity .3s ease-in-out;
     }
     svg {

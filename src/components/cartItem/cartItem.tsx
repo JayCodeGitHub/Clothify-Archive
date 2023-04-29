@@ -9,6 +9,9 @@ import {
   StyledDescription,
 } from "./cartItem.styles";
 import { useCart } from "@/hooks/useCart";
+import { motion } from "framer-motion";
+
+const MotionWrapper = motion(StyledWrapper);
 
 interface CartItemProps {
   id: number;
@@ -28,7 +31,13 @@ export default function CartItem({
   const { quantityIncrementation, quantityDecrementation, removeItem } =
     useCart();
   return (
-    <StyledWrapper>
+    <MotionWrapper
+      initial={{ opacity: "0%" }}
+      animate={{ opacity: "100%" }}
+      transition={{ duration: 0.2, delay: 0.1, ease: "easeInOut" }}
+      exit={{ opacity: "0%" }}
+      layoutId={id}
+    >
       <StyledImage
         src={img}
         alt="Item Image"
@@ -82,6 +91,6 @@ export default function CartItem({
           </StyledIconWrapper>
         </StyledQuantityWrapper>
       </StyledDescription>
-    </StyledWrapper>
+    </MotionWrapper>
   );
 }
