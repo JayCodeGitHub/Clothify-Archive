@@ -1,8 +1,8 @@
 import {
-  Wrapper,
-  CartSection,
-  Title,
-  FormSection,
+  StyledWrapper,
+  StyledCartSection,
+  StyledTitle,
+  StyledFormSection,
 } from "@/styles/pages/purchase.styles";
 import { useCart } from "@/hooks/useCart";
 import CartItem from "@/components/cartItem/cartItem";
@@ -11,9 +11,9 @@ import Form from "@/components/form/form";
 export default function PurchasePage() {
   const { cart } = useCart();
   return (
-    <Wrapper>
-      <CartSection>
-        <Title>Your order</Title>
+    <StyledWrapper>
+      <StyledCartSection>
+        <StyledTitle>Your order</StyledTitle>
         {cart.map((item) => (
           <CartItem
             key={item.id}
@@ -24,10 +24,10 @@ export default function PurchasePage() {
             price={item.price}
           />
         ))}
-      </CartSection>
-      <FormSection>
+      </StyledCartSection>
+      <StyledFormSection>
         <Form />
-      </FormSection>
-    </Wrapper>
+      </StyledFormSection>
+    </StyledWrapper>
   );
 }

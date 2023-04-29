@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.main`
-    width: 100%;
+export const StyledWrapper = styled.main`
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    width: 100%;
     ${({ theme }) => theme.mq.desktop} {
         flex-direction: row;
     }
 `
 
-export const CartSection = styled.section`
+export const StyledCartSection = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,14 +22,13 @@ export const CartSection = styled.section`
     }
 `
 
-export const Title = styled.h1`
+export const StyledTitle = styled.h1`
     align-self: flex-start;
     padding-left: 2rem;
     font-size: ${({ theme }) => theme.font.size.m};
 `
 
-export const FormSection = styled.form`
-
+export const StyledFormSection = styled.form`
     padding: 1.5rem 0;
     ${({ theme }) => theme.mq.desktop} {
         width: 35rem;
