@@ -2,13 +2,13 @@ import styled from 'styled-components'
 import Image from "next/image";
 
 
-export const Wrapper = styled.main`
+export const StyledWrapper = styled.main`
     display: flex;
-    width: 100%;
-    min-height: 80vh;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    flex-direction: column;
+    width: 100%;
+    min-height: 80vh;
     ${({ theme }) => theme.mq.desktop} {
         flex-direction: row;
         gap: 10rem;
@@ -16,23 +16,23 @@ export const Wrapper = styled.main`
 `
 
 export const StyledImage = styled(Image)`
+    object-fit: cover;
     width: 90vw;
     height: 128vw;
-    object-fit: cover;
     border-radius: 0.2rem;
     ${({ theme }) => theme.mq.desktop} {
-        height: 30rem;
         width: 30rem;
+        height: 30rem;
     }
 `
-export const DescriptionWrapper = styled.div`
-    width: 90vw;
+export const StyledDescriptionWrapper = styled.div`
     display: flex;
-    padding: 2rem 0;
     flex-direction: column;
     justify-content: space-around;
-    font-size: ${({ theme }) => theme.font.size.s};
     gap: 0.5rem;
+    width: 90vw;
+    padding: 2rem 0;
+    font-size: ${({ theme }) => theme.font.size.s};
     ${({ theme }) => theme.mq.desktop} {
         height: 20rem;
         width: 30rem;
@@ -40,27 +40,27 @@ export const DescriptionWrapper = styled.div`
 
 `
 
-export const QuantityWrapper = styled.span`
-margin-top: auto;
+export const StyledQuantityWrapper = styled.span`
     display: flex;
-    gap: .5rem;
     align-items: center;
+    gap: .5rem;
+    margin-top: auto;
 `
 
-export const IconWrapper = styled.button`
-    width: 2rem;
-    height: 2rem;
-    border-radius: 100%;
-    background-color: ${({ theme }) => theme.dark};
+export const StyledIconWrapper = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    background-color: ${({ theme }) => theme.dark};
 `
 
 
-export const Quantity = styled.h3`
+export const StyledQuantity = styled.h3`
     width: 1.5rem;
     text-align: center;
 `

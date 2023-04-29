@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { StoreItems } from "@/assets/storeItems";
 import {
-  Wrapper,
+  StyledWrapper,
   StyledImage,
-  QuantityWrapper,
-  IconWrapper,
-  Quantity,
-  DescriptionWrapper,
+  StyledQuantityWrapper,
+  StyledIconWrapper,
+  StyledQuantity,
+  StyledDescriptionWrapper,
 } from "@/styles/pages/item.styles";
 import Button from "@/components/button/button.styles";
 import { useCart } from "@/hooks/useCart";
@@ -28,7 +28,7 @@ export async function getStaticProps({ params }: any) {
   };
 }
 
-const MotionWrapper = motion(Wrapper);
+const MotionWrapper = motion(StyledWrapper);
 
 export default function Item({ item }: any) {
   const [count, setCount] = useState(1);
@@ -56,13 +56,13 @@ export default function Item({ item }: any) {
         blurDataURL="data:..."
         placeholder="blur"
       />
-      <DescriptionWrapper>
+      <StyledDescriptionWrapper>
         <h1>{item.name}</h1>
         <p>{item.description}</p>
         <h2>{item.price}$</h2>
-        <QuantityWrapper>
+        <StyledQuantityWrapper>
           Quantity:
-          <IconWrapper
+          <StyledIconWrapper
             aria-label="button with a minus icon to reduce the amount of product"
             onClick={() => setCount(count - 1)}
           >
@@ -79,9 +79,9 @@ export default function Item({ item }: any) {
             >
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
-          </IconWrapper>
-          <Quantity>{count}</Quantity>
-          <IconWrapper
+          </StyledIconWrapper>
+          <StyledQuantity>{count}</StyledQuantity>
+          <StyledIconWrapper
             aria-label="button with a plus icon to increase the amount of product"
             onClick={() => setCount(count + 1)}
           >
@@ -99,10 +99,10 @@ export default function Item({ item }: any) {
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
-          </IconWrapper>
-        </QuantityWrapper>
+          </StyledIconWrapper>
+        </StyledQuantityWrapper>
         <Button onClick={addToCart}>Add to cart</Button>
-      </DescriptionWrapper>
+      </StyledDescriptionWrapper>
     </MotionWrapper>
   );
 }
