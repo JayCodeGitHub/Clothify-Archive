@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.main`
-    width: 100%;
+export const StyledWrapper = styled.main`
     display: grid;
-    gap: 4rem;
-    padding: 2rem 5%;
     justify-items: stretch;
     grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+    width: 100%;
+    padding: 2rem 5%;
     ${({ theme }) => theme.mq.tablet} {
         grid-template-columns: repeat(2, 1fr);
     }
