@@ -64,7 +64,7 @@ export default function Item({ item }: any) {
           Quantity:
           <StyledIconWrapper
             aria-label="button with a minus icon to reduce the amount of product"
-            onClick={() => setCount(count - 1)}
+            onClick={() => (count > 1 ? setCount(count - 1) : null)}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
