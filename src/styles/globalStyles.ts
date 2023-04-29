@@ -14,7 +14,6 @@ export const GlobalStyle = createGlobalStyle`
     }
     body {
         max-width: 100vw;
-        overflow-x: hidden;
         background-color: #ECE9EA;
         font-family: ${inter.style.fontFamily};
     }

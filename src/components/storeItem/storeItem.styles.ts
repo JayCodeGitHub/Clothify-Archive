@@ -8,7 +8,6 @@ export const StyledWrapper = styled(Link)`
     justify-content: flex-start;
     align-items: flex-start;
     gap: 12px;
-    height: 35rem;
     padding: 20px;
     border-radius: 1rem;
     background-color: ${({ theme }) => theme.light};
@@ -24,9 +23,13 @@ export const StyledWrapper = styled(Link)`
 export const StyledImage = styled(Image)`
     align-self: center;
     object-fit: cover;
-    width: 80vw;
-    height: 28rem;
+    height: 20rem;
+    width: 35vw;
     border-radius: 0.2rem;
+    ${({ theme }) => theme.mq.phone} {
+        width: 80vw;
+        height: 28rem;
+    }
     ${({ theme }) => theme.mq.desktop} {
         height: 18rem;
         width: 100%;
