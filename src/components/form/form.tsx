@@ -1,9 +1,9 @@
 import {
-  Wrapper,
+  StyledWrapper,
   StyledInput,
-  Headline,
+  StyledHeadline,
   StyledButton,
-  Paragraph,
+  StyledParagraph,
 } from "./form.styles";
 import { useCart } from "@/hooks/useCart";
 
@@ -15,8 +15,8 @@ export default function Form() {
     return current;
   }
   return (
-    <Wrapper>
-      <Headline>Personal Data</Headline>
+    <StyledWrapper>
+      <StyledHeadline>Personal Data</StyledHeadline>
       <StyledInput type="text" id="email" name="email" placeholder="Email" />
       <br />
       <StyledInput type="text" id="name" name="name" placeholder="Name" />
@@ -34,7 +34,7 @@ export default function Form() {
         name="address"
         placeholder="Address"
       />
-      <Headline>Card</Headline>
+      <StyledHeadline>Card</StyledHeadline>
       <StyledInput
         type="number"
         id="number"
@@ -53,11 +53,11 @@ export default function Form() {
       <br />
       <StyledInput type="number" id="cvc" name="cvc" placeholder="CVC" />
       <br />
-      <Paragraph>
+      <StyledParagraph>
         the content on this page is not intended to be an offer for sale.
-      </Paragraph>
-      <Paragraph>Subtotal: {subtotal()}$</Paragraph>
+      </StyledParagraph>
+      <StyledParagraph>Subtotal: {subtotal()}$</StyledParagraph>
       <StyledButton>Order</StyledButton>
-    </Wrapper>
+    </StyledWrapper>
   );
 }
