@@ -15,6 +15,8 @@ export const StyledWrapper = styled.aside`
     display: flex;
     position: fixed;
     align-items: center;
+    min-width: 80vw;
+    z-index: 20;
     gap: 1rem;
     top: 2rem;
     left: 50%;
@@ -24,6 +26,9 @@ export const StyledWrapper = styled.aside`
     animation: ${intro} 0.2s linear;
     border-radius: 1rem;
     transform: translateX(-50%);
+    ${({ theme }) => theme.mq.desktop} {
+      min-width: auto;
+    }
 `
 
 export const StyledIconWrapper = styled.span`

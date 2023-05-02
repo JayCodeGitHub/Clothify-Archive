@@ -8,7 +8,7 @@ import {
 import CartItem from "../cartItem/cartItem";
 import Button from "../button/button.styles";
 import { useCart } from "@/hooks/useCart";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const MotionSubtotal = motion(StyledSubtotal);
 const MotionButtonWrapper = motion(StyledButtonWrapper);
