@@ -17,9 +17,9 @@ export default function StoreItem({ slug, name, img, price }: StoreItemProps) {
     <StyledWrapper href={slug}>
       <StyledImage
         src={img}
-        alt="Picture of the author"
-        width={500}
-        height={500}
+        alt="Picture of the item"
+        width={666}
+        height={1000}
         blurDataURL="data:..."
         placeholder="blur"
       />
