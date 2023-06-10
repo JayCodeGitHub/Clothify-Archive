@@ -30,7 +30,7 @@ export const StyledDescriptionWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 0.5rem;
+    gap: 1rem;
     width: 90vw;
     padding: 2rem 0;
     font-size: ${({ theme }) => theme.font.size.s};
