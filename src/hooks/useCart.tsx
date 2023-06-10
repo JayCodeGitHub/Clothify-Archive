@@ -16,7 +16,18 @@ interface CartContextProps {
   }[];
   quantityIncrementation: (id: number, quantity: number) => void;
   quantityDecrementation: (id: number, quantity: number) => void;
-  addItem: (newItem: any, quantity: number) => void;
+  addItem: (
+    newItem: {
+      id: number;
+      name: string;
+      slug: string;
+      img: string;
+      price: number;
+      description: string;
+      quantity: number;
+    },
+    quantity: number
+  ) => void;
   removeItem: (id: number) => void;
 }
 
