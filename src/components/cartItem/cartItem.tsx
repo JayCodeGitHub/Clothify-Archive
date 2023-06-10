@@ -39,8 +39,8 @@ export default function CartItem({
           <StyledImage
             src={img}
             alt="Item Image"
-            width={500}
-            height={500}
+            width={666}
+            height={1000}
             blurDataURL="data:..."
             placeholder="blur"
           />
@@ -101,8 +101,8 @@ export default function CartItem({
           <StyledImage
             src={img}
             alt="Item Image"
-            width={500}
-            height={500}
+            width={666}
+            height={1000}
             blurDataURL="data:..."
             placeholder="blur"
           />
