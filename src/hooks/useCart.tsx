@@ -28,6 +28,7 @@ const defaultState: any[] | (() => any[]) = [];
 
 export const CartProvider = ({ children }: CartProviderProps) => {
   const [cart, setCart] = useState(defaultState);
+
   function quantityIncrementation(id: number, quantity: number) {
     const newCart = cart.map((item) => {
       if (item.id === id) {
@@ -62,7 +63,18 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     }
   }
 
-  function addItem(newItem: any, quantity: number) {
+  function addItem(
+    newItem: {
+      id: number;
+      name: string;
+      slug: string;
+      img: string;
+      price: number;
+      description: string;
+      quantity: number;
+    },
+    quantity: number
+  ) {
     let isNew = true;
     cart.map((item) => {
       if (item.id === newItem.id) {
