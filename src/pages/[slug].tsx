@@ -50,9 +50,9 @@ export default function Item({ item }: any) {
     >
       <StyledImage
         src={item.img}
-        alt="Picture of the author"
-        width={500}
-        height={500}
+        alt="Picture of the item"
+        width={666}
+        height={1000}
         blurDataURL="data:..."
         placeholder="blur"
       />
